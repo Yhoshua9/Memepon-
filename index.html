@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8" /> 
+        <title>Mememon!</title>
+        <link rel ="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>  
+        <section id="seleccionar-mascota">
+            <h1 class="titulo" >Mememon!🔥💧🌱</h1>
+
+            <h2 class="subtitulo">Elige a tu licenciado:</h2>
+            
+            <div id="contenedor-tarjertas" class="tarjetas">
+                
+            </div>
+            
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo" >Recorre el mapa con tu meme</h2>
+            <canvas id="mapa"></canvas>
+            <button 
+                ontouchend="detenerMovimiento()" 
+                onmouseup="detenerMovimiento()" 
+                onmousedown="moverArriba()"
+                ontouchstart="moverArriba()"
+            >↑</button>
+            <div>
+                <button 
+                ontouchend="detenerMovimiento()" 
+                onmouseup="detenerMovimiento()" 
+                onmousedown="moverIzquierda()"
+                ontouchstart="moverIzquierda()"
+                >←</button>
+                <button 
+                ontouchend="detenerMovimiento()" 
+                onmouseup="detenerMovimiento()" 
+                onmousedown="moverAbajo()"
+                ontouchstart="moverAbajo()"
+                >↓</button>
+                <button 
+                ontouchend="detenerMovimiento()" 
+                onmouseup="detenerMovimiento()" 
+                onmousedown="moverDerecha()"
+                ontouchstart="moverDerecha()"
+                >→</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo" >Mememon!🔥💧🌱</h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="contenedorAtaques" class="tarjetas-ataques">
+            
+            </div>
+
+            <div id="mensajes">
+                <p id="resultado">suerte bro</p>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </section>
+            </div>
+        
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./mokepon.js" ></script>
+    </body>
+
+</html>

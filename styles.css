@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+body {
+    font-family: 'Russo one', sans-serif;
+    background-image: url(./fondoPantalla/paisaje.jpg);
+    background-size: cover;
+}
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    color: white;
+    font-size: 4rem
+}
+
+.subtitulo {
+    color: white;
+    font-size: 2rem
+}
+
+.tarjetas {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.tarjetas-ataques {
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-mokepon {
+    width: 280px;
+    height: 220px;
+    background: #0c1014;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+
+.tarjeta-mokepon img {
+    width: 160px;
+}
+
+.tarjeta-mokepon:hover {
+    cursor: pointer;
+}
+#boton-mascota{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #EEEEEE;
+    color: #000000;
+    font-family: 'Balsamiq Sans', cursive;
+    margin-top: 30px;
+}
+
+#boton-mascota:hover {
+    cursor: pointer;
+}
+
+input {
+    display:none;
+}
+
+input:checked + label {
+    background-color: #0A2647;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.boton-de-ataque {
+    background-color:#0c1014 ;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 80px;
+    height: 60px;
+    color:#EEEEEE;
+    font-family: 'Russo one', sans-serif;
+}
+
+#mensajes {
+    width: 280px;
+    background: #EEEEEE;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar{
+    border:none;
+    color:#222831;
+    font-family: 'Russo one', sans-serif;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color:black
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#ver-mapa button {
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #EEEEEE;
+    color: #000000;
+    font-family: 'Balsamiq Sans', cursive;
+    margin: 1px 0;
+}
+@media (max-width: 560px) {
+    .tarjetas, .tarjetas-ataques {
+      flex-direction: column;
+    }
+}
+@media (max-width: 290px) {
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
